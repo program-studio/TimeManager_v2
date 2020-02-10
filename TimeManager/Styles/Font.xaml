@@ -1,0 +1,16 @@
+﻿
+    <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TimeManager"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <FontStyle x:Key="DefaultTextr">
+
+    </FontStyle>
+    <FontFamily x:Key="BaseFont">Tahoma</FontFamily>
+    <FontFamily x:Key="DataGridFont">Calibri</FontFamily>
+    <system:Double x:Key="Small">12</system:Double>
+    <system:Double x:Key="Regular">16</system:Double>
+    <system:Double x:Key="Big">20</system:Double>
+    <system:Double x:Key="H1">23</system:Double>
+</ResourceDictionary>

@@ -1,0 +1,189 @@
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\bin\Debug\TimeManager.exe.config
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\bin\Debug\TimeManager.exe
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\bin\Debug\TimeManager.pdb
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\Pages\MainPage.g.cs
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\Pages\ChartPage.g.cs
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\View\MainWindow.g.cs
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\App.g.cs
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\TimeManager_MarkupCompile.cache
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\TimeManager_MarkupCompile.lref
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\App.baml
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\Pages\MainPage.baml
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\Pages\ChartPage.baml
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\Styles\ComboBox.baml
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\Styles\DatePicker.baml
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\View\MainWindow.baml
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\Styles\Buttons.baml
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\Styles\Colors.baml
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\Styles\Icons.baml
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\Styles\Scroll.baml
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\Styles\StackPanel.baml
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\Styles\TabItem.baml
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\Styles\TextBlock.baml
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\TimeManager.g.resources
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\TimeManager.Properties.Resources.resources
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\TimeManager.csproj.GenerateResource.Cache
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\TimeManager.exe
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\TimeManager.pdb
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\TimeManager.csprojResolveAssemblyReference.cache
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\Pages\TaskPage.g.cs
+D:\PROJECT\_program\_Test_work\TimeManager - Копія\TimeManager\obj\Debug\Pages\TaskPage.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\TimeManager.exe.config
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\TimeManager.exe
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\TimeManager.pdb
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.dll
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.Wpf.dll
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.pdb
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.xml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.Wpf.pdb
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.Wpf.xml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Interop.InteropExtensionLib.dll
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Interop.otkloadr.dll
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Interop.VSTOEE100.dll
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.csproj.ResolveComReference.cache
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\MainPage.g.cs
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\ChartPage.g.cs
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\MessageBoxReminder.g.cs
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\Reminder.g.cs
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\TaskPage.g.cs
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\MessageBoxCustom.g.cs
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\View\MainWindow.g.cs
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\App.g.cs
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager_MarkupCompile.cache
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager_MarkupCompile.lref
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\App.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\MainPage.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\ChartPage.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\MessageBoxReminder.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\Reminder.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\TaskPage.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\MessageBoxCustom.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\CheckBox.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\ComboBox.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\DatePicker.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\Font.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\DataGrid.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\ListBoxItem.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\Grid.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\View\MainWindow.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\Buttons.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\Colors.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\Icons.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\Scroll.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\StackPanel.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\TabItem.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\TextBlock.baml
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.g.resources
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.Properties.Resources.resources
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.csproj.GenerateResource.Cache
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.exe
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.pdb
+D:\PROJECT\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\TimeManager.exe.config
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\TimeManager.exe
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\TimeManager.pdb
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.dll
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.Wpf.dll
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.pdb
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.xml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.Wpf.pdb
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.Wpf.xml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.csprojAssemblyReference.cache
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Interop.InteropExtensionLib.dll
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Interop.VSTOEE100.dll
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.csproj.ResolveComReference.cache
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\MainPage.g.cs
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\ChartPage.g.cs
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\MessageBoxReminder.g.cs
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\Reminder.g.cs
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\TaskPage.g.cs
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\MessageBoxCustom.g.cs
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\View\MainWindow.g.cs
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\App.g.cs
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\GeneratedInternalTypeHelper.g.cs
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager_MarkupCompile.cache
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager_MarkupCompile.lref
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\App.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\MainPage.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\ChartPage.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\MessageBoxReminder.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\Reminder.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\TaskPage.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Pages\MessageBoxCustom.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\CheckBox.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\ComboBox.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\DatePicker.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\Font.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\DataGrid.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\ListBoxItem.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\Grid.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\View\MainWindow.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\Buttons.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\Colors.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\Icons.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\Scroll.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\StackPanel.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\TabItem.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\Styles\TextBlock.baml
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.g.resources
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.Properties.Resources.resources
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.csproj.GenerateResource.cache
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.csproj.CopyComplete
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.exe
+\\Mac\Home\Documents\INFO\Work\_program\_Test_work\TimeManager_v2\TimeManager\obj\Debug\TimeManager.pdb
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\bin\Debug\TimeManager.exe.config
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\bin\Debug\TimeManager.exe
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\bin\Debug\TimeManager.pdb
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.dll
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.Wpf.dll
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.pdb
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.xml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.Wpf.pdb
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\bin\Debug\LiveCharts.Wpf.xml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Interop.InteropExtensionLib.dll
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Interop.VSTOEE100.dll
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\TimeManager.csproj.ResolveComReference.cache
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Pages\MainPage.g.cs
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Pages\ChartPage.g.cs
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Pages\MessageBoxReminder.g.cs
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Pages\Reminder.g.cs
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Pages\TaskPage.g.cs
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Pages\MessageBoxCustom.g.cs
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\View\MainWindow.g.cs
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\App.g.cs
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\GeneratedInternalTypeHelper.g.cs
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\TimeManager_MarkupCompile.cache
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\TimeManager_MarkupCompile.lref
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\App.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Pages\MainPage.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Pages\ChartPage.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Pages\MessageBoxReminder.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Pages\Reminder.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Pages\TaskPage.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Pages\MessageBoxCustom.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Styles\CheckBox.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Styles\ComboBox.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Styles\DatePicker.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Styles\Font.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Styles\DataGrid.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Styles\ListBoxItem.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Styles\Grid.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\View\MainWindow.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Styles\Buttons.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Styles\Colors.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Styles\Icons.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Styles\Scroll.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Styles\StackPanel.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Styles\TabItem.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\Styles\TextBlock.baml
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\TimeManager.g.resources
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\TimeManager.Properties.Resources.resources
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\TimeManager.csproj.GenerateResource.cache
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\TimeManager.exe
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\TimeManager.pdb
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\TimeManager.csprojAssemblyReference.cache
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\TimeManager.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\Programming\_Portfolio\TimeManager_v2\TimeManager\obj\Debug\TimeManager.csproj.CopyComplete

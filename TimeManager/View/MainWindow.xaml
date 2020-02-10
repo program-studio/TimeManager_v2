@@ -1,0 +1,428 @@
+﻿<Window x:Class="TimeManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeManager"
+        xmlns:vm="clr-namespace:TimeManager.ViewModel"
+        xmlns:app="clr-namespace:TimeManager.Pages"
+        xmlns:converters="clr-namespace:TimeManager.ViewModel.Converters" 
+  xmlns:b="clr-namespace:TimeManager.Model"
+        mc:Ignorable="d"
+        Title="TimeManager" Height="620" Width="500"  WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"  Background="#dad4da" BorderBrush="Gray" BorderThickness="1" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="5" />
+    </WindowChrome.WindowChrome>
+    <!--ResizeMode="CanMinimize"-->
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <vm:TaskViewModel x:Key="TaskViewModel"/>
+        <vm:UserViewModel x:Key="UserViewModel"/>
+        <vm:TimeViewModel x:Key="TimeViewModel"/>
+        <app:Reminder x:Key="Reminder"/>
+        <converters:BackgroundConverter x:Key="converter"/>
+        <converters:ForegroundConverter x:Key="converterF"/>
+        <converters:BoolToVisibleOrHidden x:Key="BoolToVisibleOrHidden" />
+        <!--<BooleanToVisibilityConverter x:Key="VisibleIfTrueConverter" />-->
+
+    </Window.Resources>
+
+    <!--<Window.Resources>
+        -->
+    <!--<DataTemplate x:Name="timeViewModel" DataType="{x:Type vm:TimeViewModel}">DataType="{x:Type vm:TimeViewModel}"
+            <DockPanel DataContext="{Binding TimeViewModel}"/>
+            <view:MainPage DataContext="{Binding}"/>
+        </DataTemplate>-->
+    <!--
+        <vm:TimeViewModel x:Key="VM"/>
+    </Window.Resources>-->
+
+  
+    <Grid >
+        <!--ShowGridLines="True" DataContext="{StaticResource VM}"
+        Title="MainWindow" Height="700" Width="600" WindowStyle="None" ResizeMode="CanMinimize" Background="LightGray" BorderBrush="Gray" BorderThickness="1" >-->
+        <!--x:Name="GlowWindow"
+    
+        Title="MainWindow" Width="600" Height="700" WindowStartupLocation="Manual"
+    AllowsTransparency="True" Background="Transparent" WindowStyle="None"
+    ShowInTaskbar="False" Foreground="#007acc" MaxWidth="5000" MaxHeight="5000">
+
+    <Grid>
+    <Border x:Name="OuterGlow" Margin="10" Background="Transparent"
+            BorderBrush="{Binding Foreground, ElementName=GlowWindow}"
+            BorderThickness="5">
+        
+        <Border.Effect>
+            <BlurEffect KernelType="Gaussian" Radius="15" RenderingBias="Quality" />
+            
+        </Border.Effect>
+        
+        
+        
+    </Border>
+        
+        
+    </Grid>-->
+
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+       
+         
+        <Button Style="{StaticResource ControlButton}" Grid.Row="0" Margin="0 0 0 0" Width="30"  HorizontalAlignment="Right" Click="BtmClose_Click">
+            <Grid >
+                <Viewbox Grid.Row="0" Child="{StaticResource CloseIcon}" Width="15"/>
+            </Grid>
+        </Button>
+        <Button Style="{StaticResource ControlButton}" Grid.Row="0" Margin="0 0 30 0" Width="30"  HorizontalAlignment="Right"  Click="BtmMinimize_Click">
+            <Grid >
+                <Viewbox Grid.Row="0" Child="{StaticResource MinimizeIcon}" Width="15"/>
+            </Grid>
+        </Button>
+        <!--<TextBlock Text="TimeManager" Foreground="Gray" Margin="10 0 0 0"></TextBlock>-->
+
+        <Border Grid.Row="0" x:Name="panel1"></Border>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock  Text="User:" VerticalAlignment="Center"  Margin="15 0 0 0"/>
+            <TextBlock   Margin="5 0 0 0"  VerticalAlignment="Center"  Text="{Binding Source={StaticResource UserViewModel}, Path= CurrentLogUser, Mode=TwoWay}"></TextBlock>
+        </StackPanel>
+
+        <Grid  Grid.Row="2" >
+            <StackPanel  Orientation="Horizontal" Grid.Row="2" >
+                <Viewbox  Child="{StaticResource MonitorIcon}" Width="25" Margin="15 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock  Text="Start work: " FontSize="22" Margin="5 0 0 2" FontWeight="Bold" VerticalAlignment="Center"/>
+                <TextBlock DataContext="{StaticResource TimeViewModel}"  Text="{Binding SelectedItem.StartTime, StringFormat=HH:mm:ss}" FontSize="22" Margin="5 0 0 2" FontWeight="Bold" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel  Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right" >
+                <Button Style="{StaticResource ControlPageButton}" Width="35" Height="35" Margin="2.5 0 2.5 0" HorizontalAlignment="Right" Background="White" Command="{ Binding CurMainPage_Click}" IsEnabled="{Binding MainTabItems[0].IsChecked}">
+
+                    <Viewbox  Child="{StaticResource AlarmIcon2}"  Margin="7" />
+                </Button>
+
+
+                <Button Style="{StaticResource ControlPageButton}" Width="35" Height="35" Margin="2.5 0 2.5 0" HorizontalAlignment="Right" Background="White" Command="{ Binding CurChartPage_Click}" IsEnabled="{Binding MainTabItems[1].IsChecked}">
+                    <Viewbox  Child="{StaticResource ChartBar}"  Margin="7" />
+                </Button>
+
+                <Grid>
+
+
+
+                    <Button Style="{StaticResource ControlPageButton}" Width="35" Height="35" Margin="2.5 0 15 0" HorizontalAlignment="Right" Background="White" Command="{ Binding CurTaskPage_Click}" IsEnabled="{Binding MainTabItems[2].IsChecked}">
+                        <Viewbox  Child="{StaticResource TaskIcon1}"  Margin="7" />
+                    </Button>
+
+                    <Grid  Margin="24 0 0 20 " DataContext="{Binding TaskVM}" >
+                        <!--DataContext="{StaticResource TaskViewModel}"-->
+                        <Ellipse Fill="{Binding TaskTabItems[1].Task.Count, Converter={StaticResource converter}}" Height="17" Width="17"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin=" 0 0 0 0">
+                        </Ellipse >
+
+                        <TextBlock   Text="{Binding TaskTabItems[1].Task.Count}" Foreground="{Binding TaskTabItems[1].Task.Count, Converter={StaticResource converterF}}" FontSize="11" VerticalAlignment="Center" HorizontalAlignment="Center"   Margin="0 0 0 2" >
+                        </TextBlock>
+                    </Grid>
+
+                    <!--<TextBlock Name = "CountReminder" Text="{Binding Source={StaticResource TaskViewModel}, Path=CountReminder, Mode=TwoWay}" HorizontalAlignment="Right" Margin="0 0 200 0"></TextBlock>-->
+                </Grid>
+                <!--<Grid  Margin="0 0 15 0 " DataContext="{Binding TaskVM}" >
+                    --><!--DataContext="{StaticResource TaskViewModel}"--><!--
+                    <Ellipse Fill="#ff070e" Height="20" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin=" 0 0 0 0">
+                    </Ellipse >
+
+                    <TextBlock   Text="{Binding TaskTabItems[1].Task.Count}" Foreground="White"  VerticalAlignment="Center" HorizontalAlignment="Center"   Margin="0 0 0 0" >
+                        --><!--<TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Task.Count}" Value="0" >
+                                        <Setter Property="Foreground" Value="Transparent"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>-->
+                        <!--DataContext="{Binding TaskTabItems[1]}"--><!--
+                    </TextBlock>
+                </Grid>-->
+
+            </StackPanel>
+
+
+            <!--<ToggleButton  Width="35" Height="35" Margin="0 0 10 0" HorizontalAlignment="Right" Background="White" IsChecked="{Binding IsChecked}" Command="{ Binding CurPage_Click}">
+                <Viewbox  Child="{StaticResource ChartBar}"  Margin="5" />
+            </ToggleButton>-->
+
+        </Grid>
+
+        <Frame Grid.Row="4" Content="{Binding CurPageView}" NavigationUIVisibility="Hidden"/>
+
+
+        <StackPanel Grid.Row="4" DataContext="{Binding TaskVM}" Width="250" Margin="0 0 0 5" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+  
+                <Button   x:Name="ReminderShowButton" Style="{StaticResource ControlPageButton}"   
+                                    HorizontalAlignment="Right" Margin="0 0 13 3" Width="30" Height="30" 
+                                    Command="{Binding Path=DataContext.ReminderVisible_Click, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"  CommandParameter="{Binding}" Background="WhiteSmoke" Opacity="0.4" BorderBrush="Red" BorderThickness="1" >
+                    <Grid>
+                        <Viewbox Grid.Row="0" Child="{StaticResource ReminderIcon}" Width="15" Margin="0 0 1 0" Opacity="0.8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </Button>
+
+            <ListBox x:Name="listBoxReminder" Visibility="{Binding  IsVisible, Converter={StaticResource BoolToVisibleOrHidden}}" 
+                     Grid.Row="4" BorderBrush="Transparent"  Width="258" MaxHeight="125" VerticalAlignment="Bottom" HorizontalAlignment="Right" 
+                     Margin="0 0" ItemsSource="{Binding TaskTabItems[1].Task, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="Transparent">
+                
+                <ListBox.ItemTemplate>
+                    
+                    <DataTemplate>
+                        <!--<app:Reminder />-->
+                        <!--<app:Reminder  Height="auto" Width="auto"></app:Reminder>-->
+                        
+                        <ListBoxItem>
+
+                            <Grid Background="Transparent" Width="233" Height="40" Margin="0 0 0 2" >
+                                <Border Margin="0" BorderBrush="White" Background="#ffb3b1" BorderThickness="1" CornerRadius="8">
+                                    <Border.Effect>
+                                        <DropShadowEffect Color="Gray" Opacity="0.2" />
+                                    </Border.Effect>
+                                </Border>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <!--<ColumnDefinition Width="30"/>-->
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <Viewbox Grid.Column="0" Child="{StaticResource ReminderIcon}" Width="18" Margin="5"/>
+
+                                    <Grid Grid.Column="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="115"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Row="0" Grid.Column="0"  Margin="0" VerticalAlignment="Center" Text="{Binding TaskName}" FontSize="12" FontWeight="Bold" />
+                                            <TextBlock Grid.Row="0" Grid.Column="1" Margin="0" VerticalAlignment="Center" Text="{Binding ReminderTime,  StringFormat=dd.MM.yy (HH:mm)}" FontSize="10"  />
+                                            <!--<TextBlock Grid.Row="0" Grid.Column="1" Margin="0" VerticalAlignment="Center" Text="{Binding CreateTaskTime,  StringFormat=dd.MM.yy (HH:mm)}" FontSize="10"  />-->
+
+                                        </Grid>
+                                       
+                                        
+                                        <TextBlock Grid.Row="1" Margin="0" VerticalAlignment="Top" Text="{Binding TaskBody}" FontSize="9" FontWeight="Bold" />
+                                    </Grid>
+
+                                    <!--<Button Grid.Column="2"  x:Name="DrawCircleButton" Style="{StaticResource ControlTaskButton}" HorizontalAlignment="Center" Margin="5" Width="20" Height="20"
+                                    Command="{Binding Path=DataContext.RemoveTask_Click, RelativeSource={RelativeSource AncestorType={x:Type Page}}}"  CommandParameter="{Binding}" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" >
+                                        <WrapPanel>
+                                            <Viewbox Grid.Row="0" Child="{StaticResource CloseTaskIcon}" Width="15"/>
+                                        </WrapPanel>
+                                    </Button>-->
+
+                                </Grid>
+
+                            </Grid>
+                          
+                        </ListBoxItem>
+                        
+                    </DataTemplate>
+                    
+                </ListBox.ItemTemplate>
+
+            </ListBox>
+            
+        </StackPanel>
+
+        
+   
+
+        <!--<Button Grid.Row="4"  x:Name="ReminderShowButton" Style="{StaticResource ControlPageButton}"   HorizontalAlignment="Right" Margin="0 130 10 0" Width="30" Height="30" 
+                                    Command="{Binding Path=DataContext.RemoveTask_Click, RelativeSource={RelativeSource AncestorType={x:Type Page}}}"  CommandParameter="{Binding}" Background="WhiteSmoke" Opacity="0.4" BorderBrush="Red" BorderThickness="1" >
+            <Grid>
+                --><!--<Viewbox Grid.Row="0" Child="{StaticResource CircleIcon}" Width="45" Margin="0 0 0 0" Opacity="0.2" HorizontalAlignment="Center" VerticalAlignment="Center"/>--><!--
+                <Viewbox Grid.Row="0" Child="{StaticResource ReminderIcon}" Width="15" Opacity="0.8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </Button>-->
+
+
+
+
+
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" x:Name="panel1"></Border>
+        
+        <TextBlock Grid.Row="1" Text="Користувач:" VerticalAlignment="Center"  Margin="10 0 5 0"/>
+       
+        <Grid Grid.Row="2">
+            <Viewbox  Child="{StaticResource MonitorIcon}" Width="25" Margin="10 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBlock  Text="Початок роботи: 00:00:00" FontSize="22" Margin="45 0 0 2" FontWeight="Bold" VerticalAlignment="Center"/>
+            <ToggleButton Width="35" Height="35" Margin="0 0 10 0" HorizontalAlignment="Right" Background="White">
+                <Viewbox  Child="{StaticResource ChartBar}"  Margin="5" />
+            </ToggleButton>
+        </Grid>
+       
+
+        <Grid Grid.Row="3" Margin="5 0 5 0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Text="Час роботи: 00:00:00" FontSize="14" HorizontalAlignment="Center" Margin="0 2 0 0"/>
+            <TextBlock Grid.Column="1" Text="Час перерви: 00:00:00" FontSize="14" HorizontalAlignment="Center" Margin="0 2 0 0"/>
+            <Button Grid.Column="0" Margin="5 30 5 5"  FontSize="20" Background="LimeGreen">
+                <Grid>
+                    <Viewbox  Child="{StaticResource AlarmIcon2}" Margin="0 20 0 45"/>
+                    <TextBlock Text="Початок роботи" Margin="0 35 0 0"  VerticalAlignment="Center" />
+                </Grid>
+            </Button>
+            <Button Grid.Column="1" Margin="5 30 5 5"  FontSize="20" Background="DarkOrange">
+                 <Grid>
+                    <Viewbox  Child="{StaticResource ProgressClockIcon}" Margin="0 20 0 45"/>
+                    <TextBlock Text="Перерва" Margin="0 35 0 0"  VerticalAlignment="Center" />
+                </Grid>
+            </Button>
+
+        </Grid>
+
+        <Grid Grid.Row="4" Margin="5 0 5 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Назва Наради / Навчання:" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBox  Grid.Column="1" Margin="5"></TextBox>
+        </Grid>
+
+        <Grid Grid.Row="5" Margin="5 0 5 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Margin="5" FontSize="16" Background="White">
+                <Grid>
+                    <Viewbox  Child="{StaticResource DinnerIcon}" Margin="0 15 0 50"/>
+                    <TextBlock Text="Обід" Margin="0 20 0 0"  VerticalAlignment="Center" />
+                </Grid>
+            </Button>
+            <Button Grid.Column="1" Margin="5" FontSize="16" Background="White">
+                <Grid>
+                    <Viewbox  Child="{StaticResource PauseIcon2}" Margin="0 15 0 50"/>
+                    <TextBlock Text="Щогодинна перерва" Margin="0 20 0 0"  VerticalAlignment="Center" />
+                </Grid>
+            </Button>
+            <Button Grid.Column="2" Margin="5" FontSize="16" Background="White">
+                <Grid>
+                    <Viewbox  Child="{StaticResource MeetingIcon}" Margin="0 15 0 50"/>
+                    <TextBlock Text="Нарада" Margin="0 20 0 0"  VerticalAlignment="Center" />
+                </Grid>
+            </Button>
+        </Grid>
+
+        <Grid Grid.Row="6" Margin="5 0 5 0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Margin="5" FontSize="16" Background="White">
+                <Grid>
+                    <Viewbox  Child="{StaticResource SchoolIcon}" Margin="0 15 0 50"/>
+                    <TextBlock Text="Навчання" Margin="0 20 0 0"  VerticalAlignment="Center" />
+                </Grid>
+            </Button>
+            <Button Grid.Column="1" Margin="5" FontSize="16" Background="White">
+                <Grid>
+                    <Viewbox  Child="{StaticResource NoteIcon}" Margin="0 15 0 50"/>
+                    <TextBlock Text="Звільнююча записка" Margin="0 20 0 0"  VerticalAlignment="Center" />
+                </Grid>
+            </Button>
+            <Button Grid.Column="2" Margin="5" FontSize="16" Background="White">
+                <Grid>
+                    <Viewbox  Child="{StaticResource DoctorIcon}" Margin="0 15 0 50"/>
+                    <TextBlock Text="До лікаря" Margin="0 20 0 0"  VerticalAlignment="Center" />
+                </Grid>
+            </Button>
+        </Grid>
+
+       
+
+
+
+
+
+
+
+
+        <Button Style="{StaticResource ControlButton}" Grid.Row="0" Margin="570,0,0,0"  Click="BtmClose_Click">
+            <Grid >
+                
+            -->
+        <!--не обовязково-->
+        <!--
+            <Viewbox Grid.Row="0" Child="{StaticResource CloseIcon}" Width="15"/>
+
+            </Grid>
+        </Button>
+
+        <Button Style="{StaticResource ControlButton}" Grid.Row="0" Margin="540,0,30,0"  Click="BtmMinimize_Click">
+            <Grid >
+                
+            -->
+        <!--не обовязково-->
+        <!--
+            <Viewbox Grid.Row="0" Child="{StaticResource MinimizeIcon}" Width="15"/>
+
+            </Grid>
+        </Button>-->
+
+        <!--<Button Grid.Row="6" Margin="400,50,0,50"  Click="Button_Info_Click">
+            <Grid>
+                <Viewbox Margin="0,0,64,0" Child="{StaticResource CalendarIcon}"/>
+                <TextBlock Text="NEW" Margin="26,0,0,0"  VerticalAlignment="Center" />
+            </Grid>
+        </Button>-->
+
+        <!--<Button  Grid.Row="2" Margin="400,0,0,0"  Click="Button_Info_Click">
+            <Grid  Width="100"  MaxHeight="30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Viewbox Grid.Column="0" VerticalAlignment="Center" Child="{StaticResource CalendarIcon}"/>
+                <TextBlock  Grid.Column="1" Text="NEW"   VerticalAlignment="Center" />
+            </Grid>
+        </Button>-->
+
+
+
+
+
+
+
+    </Grid>
+
+</Window>

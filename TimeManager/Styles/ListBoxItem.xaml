@@ -1,0 +1,175 @@
+﻿
+    <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TimeManager">
+
+
+    <!--Background="#e9e9e9"-->
+
+    <Style x:Key="SimpleListBoxItem" TargetType="ListBoxItem">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Border x:Name="Bd"
+                            BorderBrush="#c5c9c3"
+                            BorderThickness="1.5"
+                            Background="Snow"
+                            CornerRadius="5"
+                            Margin="2 1 2 1"
+                            Padding="{TemplateBinding Padding}"
+                            SnapsToDevicePixels="true">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Selector.IsSelectionActive"
+                                            Value="False" />
+                                <Condition Property="IsSelected"
+                                            Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background"
+                                    TargetName="Bd"
+                                    Value="#f0dff2" />
+                            <Setter Property="TextElement.FontWeight"
+                                    TargetName="Bd"
+                                    Value="Bold" />
+                            <Setter Property="Margin"
+                                    TargetName="Bd"
+                                    Value="5 1 5 1" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Selector.IsSelectionActive"
+                                            Value="True" />
+                                <Condition Property="IsSelected"
+                                            Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background"
+                                    TargetName="Bd"
+                                    Value="#e4dde4" />
+                            <Setter Property="TextElement.FontWeight"
+                                    TargetName="Bd"
+                                    Value="Bold" />
+                            <Setter Property="Margin"
+                                    TargetName="Bd"
+                                    Value="5 1 5 1" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="PauseListBoxItem" TargetType="ListBoxItem">
+        <!--<Style.Triggers>
+            <Trigger Property="IsSelected" Value="True" >
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Background" Value="Yellow" />
+                <Setter Property="Foreground" Value="Black" />
+                <Setter Property="BorderBrush" Value="Red"/>
+            </Trigger>
+        </Style.Triggers>-->
+        <Setter Property="Template">
+            <Setter.Value>
+                <!--<ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    
+                    <Border x:Name="Bd"
+                            BorderBrush="#c5c9c3"
+                            BorderThickness="0"
+                            Background="Transparent"
+                            
+                           
+                            Padding="{TemplateBinding Padding}"
+                            SnapsToDevicePixels="true">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Selector.IsSelectionActive"
+                                            Value="False" />
+                                <Condition Property="IsSelected"
+                                            Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background"
+                                    TargetName="Bd"
+                                    Value="yellow" />
+                            <Setter Property="TextElement.FontWeight"
+                                    TargetName="Bd"
+                                    Value="Bold" />
+                            <Setter Property="Margin"
+                                    TargetName="Bd"
+                                    Value="0 0 0 0" />
+                            <Setter Property="bor"
+                                    TargetName="Bd"
+                                    Value="0 0 0 0" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Selector.IsSelectionActive"
+                                            Value="True" />
+                                <Condition Property="IsSelected"
+                                            Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background"
+                                    TargetName="Bd"
+                                    Value="yellow" />
+                            <Setter Property="TextElement.FontWeight"
+                                    TargetName="Bd"
+                                    Value="Bold" />
+                            <Setter Property="Margin"
+                                    TargetName="Bd"
+                                    Value="0 0 0 0" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>-->
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Border x:Name="Bd"
+                BorderThickness="{TemplateBinding Border.BorderThickness}"
+                Padding="{TemplateBinding Control.Padding}"
+                BorderBrush="Transparent"
+                Background="Transparent"
+                SnapsToDevicePixels="True">
+                        <ContentPresenter
+                    Content="{TemplateBinding ContentControl.Content}"
+                    ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                    HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                    SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+                    </Border>
+                    
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="false">
+                            <Setter Property="Background" TargetName="Bd" Value="Transparent"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Bd" Property="Background" Value="Transparent"></Setter>
+                        </Trigger>
+                        <Trigger Property="ToggleButton.IsChecked" Value="True">
+                            <Setter TargetName="Bd" Property="Background" Value="Transparent"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <!--<Setter Property="FocusVisualStyle" Value="x:Null"/>
+        <Style.Triggers>
+            <Trigger Property="FocusManager.FocusedElement" Value="{Binding RelativeSource={RelativeSource Self=}}"/>
+        </Style.Triggers>-->
+    </Style>
+        
+        
+        
+        
+        
+        
+        
+
+</ResourceDictionary>

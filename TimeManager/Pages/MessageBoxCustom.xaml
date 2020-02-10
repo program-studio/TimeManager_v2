@@ -1,0 +1,133 @@
+﻿<Window x:Class="TimeManager.Pages.MessageBoxCustom"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeManager.Pages"
+        mc:Ignorable="d"
+        Title="MessageBoxReminder" Height="120" Width="300" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="Transparent"   MouseLeftButtonDown="Window_MouseLeftButtonDown" >
+    <Grid>
+
+        <Grid >
+            <Border Background="#f3f6fb" BorderBrush="#f4656d" BorderThickness="2" CornerRadius="12">
+                <!--<Border.Effect>
+                    <DropShadowEffect Color="Gray" Opacity="0.5" />
+                </Border.Effect>-->
+            </Border>
+            <!--<Border Background="#ffb3b1" BorderBrush="White" BorderThickness="1" CornerRadius="12"></Border>-->
+        </Grid>
+        
+        <Grid>
+        <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+            <Border Background="LightGray" BorderBrush="#f4656d" BorderThickness="2 2 2 0"  CornerRadius="12 12 0 0">
+                <Grid Grid.Row="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+
+                <!--<Viewbox Grid.Column="0" Child="{StaticResource ReminderIcon}" Width="18" Margin="-4 6 0 0"/>-->
+                <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" >
+                        <TextBlock Text="Reminder" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Foreground="#f4656d" FontSize="14"></TextBlock>
+                    <Viewbox Grid.Column="1" Child="{StaticResource ReminderIcon}" Opacity="0.6" Width="15" Margin="5 2 0 0"/>
+                </StackPanel>
+                <Grid Grid.Column="2">
+                    <Button  Style="{StaticResource ReminderCloseButton}" Grid.Row="0" Margin="0 0 0 0" Width="35"  HorizontalAlignment="Right" Click="BtmClose_Click">
+                        <Grid >
+                            <Viewbox Grid.Row="0" Child="{StaticResource CloseReminderIcon}" Width="12"/>
+                        </Grid>
+                    </Button>
+                </Grid>
+            </Grid>
+            </Border>
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="5 2 5 0" >
+                <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                    <TextBlock Name="TaskNameTb" Text="{Binding TaskName}"  HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" MaxWidth="200"  TextTrimming="WordEllipsis"></TextBlock>
+                </StackPanel>
+                <TextBlock Name="TaskBodyTb" Text="{Binding TaskBody}"  HorizontalAlignment="Center" MaxWidth="285" TextTrimming="WordEllipsis"></TextBlock>
+                <TextBlock Name="TaskRemindetTimeTb" Text="{Binding ReminderTime, StringFormat=dd.MM.yyyy (HH:mm:ss)}" HorizontalAlignment="Center"></TextBlock>-->
+
+                <TextBlock Name="MessageContainerTName" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" TextTrimming="WordEllipsis"/>
+                <TextBlock Name="MessageContainerTBody" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" MaxWidth="285" TextTrimming="WordEllipsis"/>
+                <TextBlock Name="MessageContainerTTime" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" Foreground="Gray" />
+            </StackPanel>
+            
+            
+            
+
+            <!--<TextBlock Name="MessageContainerTName" Grid.Row="1" TextWrapping="WrapWithOverflow" Margin="10"/>
+            <TextBlock Name="MessageContainerTBody" Grid.Row="1" TextWrapping="WrapWithOverflow" Margin="10"/>
+            <TextBlock Name="MessageContainerTTime" Grid.Row="1" TextWrapping="WrapWithOverflow" Margin="10"/>-->
+            
+        <StackPanel Name="ButtonContainer" Grid.Row="2" Orientation="Horizontal"
+                    HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+                <StackPanel.Resources >
+                    <Style TargetType="Button" >
+                        
+                    <!--<Setter Property="MinHeight" Value="25"/>
+                    <Setter Property="MinWidth" Value="75"/>
+                    <Setter Property="Margin" Value="10,0,0,0"/>-->
+                        
+                        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+                        <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+                        <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+                        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                        <Setter Property="Height" Value="30"/>
+                        <Setter Property="Width" Value="80"/>
+                        <Setter Property="Margin" Value="25 0 25 5"/>
+                        <!--<Setter Property="Padding" Value="1"/>-->
+
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+
+                                    <Border x:Name="border"  BorderBrush="#e0907a" BorderThickness="1" Background="#f2f2f0" SnapsToDevicePixels="true" CornerRadius="12">
+                                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsDefaulted" Value="true">
+                                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver" Value="true">
+                                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                                        </Trigger>
+                                        <Trigger Property="IsPressed" Value="true">
+                                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                                        </Trigger>
+                                        <Trigger Property="IsEnabled" Value="false">
+                                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                                            <Setter Property="Opacity" TargetName="border" Value="0.2"/>
+                                        </Trigger>
+                                        <!--<Trigger Property="IsEnabled" Value="true">
+                            <Setter Property="Opacity" TargetName="border" Value="0.2"/>
+                        </Trigger>-->
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+
+
+                    </Style>
+            </StackPanel.Resources>
+        </StackPanel>
+        </Grid>
+        
+        
+        
+    </Grid>
+</Window>

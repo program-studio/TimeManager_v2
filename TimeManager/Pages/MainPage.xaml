@@ -1,0 +1,174 @@
+﻿<Page x:Class="TimeManager.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TimeManager.Pages"
+         xmlns:vvvm="clr-namespace:TimeManager.ViewModel"
+      xmlns:vmmm="clr-namespace:TimeManager.Model"
+     
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="500" Background="#dad4da"
+      Title="MainPage">
+
+    <!--xmlns:vvvm="clr-namespace:TimeManager.ViewModel"-->
+    
+    <Page.DataContext>
+        <vvvm:TimeViewModel/>
+    </Page.DataContext>
+    <Page.Resources>
+        <vvvm:TimeViewModel x:Key="timeViewModel"/>
+     
+    </Page.Resources>
+
+    <Grid>
+        
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+
+
+        <Grid Grid.Row="0" Margin="5 0 5 0"  >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DataContext="{Binding WorkTimeItems[6]}">
+                <TextBlock Grid.Column="0" Text="Work time: " FontSize="14" HorizontalAlignment="Center" Margin="0 2 0 0"/>
+                <TextBlock Grid.Column="0" Text="{Binding WorkTimeSpan}" FontSize="14" HorizontalAlignment="Center" Margin="0 2 0 0"/>
+            </StackPanel>
+            <!--<TextBlock Grid.Column="1" Text="Час перерви: 00:00:00" FontSize="14" HorizontalAlignment="Center" Margin="0 2 0 0"/>-->
+            <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" DataContext="{Binding SelectedItem}">
+                <TextBlock Grid.Column="0" Text="Break time: " FontSize="14" HorizontalAlignment="Center" Margin="0 2 0 0"/>
+                <TextBlock Grid.Column="0" Text="{Binding WorkTimeSpan}" FontSize="14" HorizontalAlignment="Center" Margin="0 2 0 0">
+                   
+                </TextBlock>
+            </StackPanel>
+
+            <ToggleButton DataContext="{Binding WorkTimeItems[6]}" Grid.Column="0" IsEnabled="{Binding IsEnabled}"  Command="{Binding Path=DataContext.StartTimer_Click, RelativeSource={RelativeSource AncestorType={x:Type Page}}}"  Margin="10 30 5 5"   FontSize="20" Background="LimeGreen" Style="{StaticResource ControlPauseButton}">
+                <Grid>
+                    <Viewbox  Child="{StaticResource AlarmIcon2}" Margin="0 20 0 45"/>
+                    <TextBlock Text="Start work" Margin="0 35 0 0"  VerticalAlignment="Center" />
+                </Grid>
+            </ToggleButton>
+
+
+            <ToggleButton DataContext="{Binding SelectedItem}" Grid.Column="1" IsEnabled="{Binding IsEnabled}"  Command="{Binding Path=DataContext.PauseTimer_Click, RelativeSource={RelativeSource AncestorType={x:Type Page}}}"  CommandParameter="{Binding}" Margin="5 30 10 5"  FontSize="20" Background="DarkOrange" Style="{StaticResource ControlPauseButton}">
+                <Grid>
+                    <Viewbox  Child="{StaticResource ProgressClockIcon}" Margin="0 20 0 45"/>
+                    <TextBlock Text="Break" Margin="0 35 0 0"  VerticalAlignment="Center" />
+                </Grid>
+            </ToggleButton>
+
+
+
+
+        </Grid>
+
+        <!--<Grid Grid.Row="1" Margin="5 0 5 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>-->
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <TextBlock Grid.Column="0" Text="Name of the Meeting / Training:" Margin="15 0 0 0" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Right" />
+            <TextBox  Grid.Column="1" Margin="6 5 10 5" Width="263" BorderBrush="Gray" BorderThickness="1"></TextBox>
+        <!--</Grid>-->
+        </StackPanel>
+
+        <Grid Grid.Row="2" Margin="0 0 0 0" >
+            <!--<WrapPanel MaxWidth="600" Orientation="Horizontal">-->
+            <ListBox Name="ListBoxBtm" ItemContainerStyle="{StaticResource PauseListBoxItem}" Margin="5 0 5 0"  ItemsSource="{Binding WorkTimeItems}"  SelectedItem="{Binding SelectedItem, Mode=TwoWay}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" VerticalContentAlignment="Top" Background="Transparent" BorderBrush="Transparent"  ><!--ItemContainerStyle="{StaticResource PauseListBoxItem}"-->
+                <!--IsSynchronizedWithCurrentItem="True"-->
+                
+                <!--<ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="FocusManager.FocusedElement" Value="{Binding RelativeSource={RelativeSource Self}}"/>
+                            </Trigger>
+                        </Style.Triggers>
+                        
+                    </Style>
+                </ListBox.ItemContainerStyle>-->
+           
+
+                <ListBox.ItemTemplate ><!--IsSynchronizedWithCurrentItem="False"-->
+                    
+                    <DataTemplate >
+                       
+                        <DataTemplate.Triggers>
+                            <!--<DataTrigger
+                        Binding="{Binding
+                            RelativeSource={RelativeSource
+                                Mode=FindAncestor,
+                                AncestorType={x:Type ListBoxItem}},
+                                Path=IsSelected}"
+                        Value="false">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>-->
+                            <DataTrigger
+                        Binding="{Binding Name}"
+                        Value="Work time">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                            </DataTrigger>
+                            <DataTrigger
+                        Binding="{Binding Name}"
+                        Value="Break time">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                            </DataTrigger>
+                        </DataTemplate.Triggers>
+
+                        <ListBoxItem IsSelected="{Binding IsSelected}" Margin="0 3"  >
+
+                            <Grid >
+                                <ToggleButton Name="btmTest"  IsChecked="{Binding IsSelected}" IsEnabled="{Binding IsEnabled}"  Background="Snow"  Height="75" Width="141.3"  Command="{Binding Path=DataContext.PauseButton_Click, RelativeSource={RelativeSource AncestorType={x:Type Page}}}"  CommandParameter="{Binding}" Style="{StaticResource ControlPauseButton}" ><!--CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}-->
+                                    <!--Focusable="False"--> <!--Style="{StaticResource ControlTaskButton}"-->
+                                    <StackPanel VerticalAlignment="Center">
+                                        <Grid Width="25" >
+                                            <Path Fill="Black" Stretch="Uniform" Data="{Binding ImagePath}"/>
+                                        </Grid>
+                                        <TextBlock Text="{Binding Name}" Margin="0 0 0 0"  VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                                        <!--<Grid DataContext="{Binding SelectedItem}">-->
+                                        <TextBlock Text="{Binding WorkTimeSpan, StringFormat=({0})}" Margin="0 0 0 0" Opacity="0.5"  VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            <TextBlock.Style>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding WorkTimeSpan}" Value="0" >
+                                                            <!--<Setter Property="Foreground" Value="Transparent"/>-->
+                                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                        <!--</Grid>-->
+                                    </StackPanel>
+                                </ToggleButton>
+    
+                            </Grid>
+                        </ListBoxItem>
+                    </DataTemplate>
+                    </ListBox.ItemTemplate>
+                <ListBox.ItemsPanel >
+                    <ItemsPanelTemplate >
+                            <WrapPanel IsItemsHost="True"/>
+                            <!--<VirtualizingStackPanel IsItemsHost="True"  Orientation="Horizontal"/>-->
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+            <!--</WrapPanel>-->
+        </Grid>
+
+
+
+
+        </Grid>
+</Page>

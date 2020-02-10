@@ -1,0 +1,185 @@
+﻿
+    <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TimeManager">
+
+    <!--курсор при зміні розмірів стовпця-->
+    <Style x:Key="ColumnHeaderGripperStyle" TargetType="{x:Type Thumb}">
+        <Setter Property="Width" Value="8"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Cursor" Value="SizeWE"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DeafultColumnHeaderDataGrid" TargetType="{x:Type DataGridColumnHeader}">
+        <!--<Setter Property="OverridesDefaultStyle" Value="True"/>-->
+        <Setter Property="Background" Value="{StaticResource GainsboroBrush}"/>
+        <Setter Property="BorderThickness" Value="0.5 0 0.5 0"/>
+        <Setter Property="BorderBrush" Value="{StaticResource GrayBrush}"/>
+        <Setter Property="MinHeight" Value="50"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                    <Grid>
+                        <Border BorderThickness="0.5 0 0.5 0" BorderBrush="{StaticResource GrayBrush}">
+                            <Grid Background="{StaticResource GainsboroBrush}">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="6"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Path x:Name="SortArrow"                                            
+                                            HorizontalAlignment="Center" VerticalAlignment="Center" Width="8" Margin="2 0" Stretch="Fill" Fill="Black"
+                                            RenderTransformOrigin="0.5,0.4" Visibility="Collapsed" Data="M0,0 L1,0 0.5,1 z" />
+                                    <ContentPresenter Grid.Row="1"/>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                        <Thumb x:Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                        <Thumb x:Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="SortDirection" Value="Ascending">
+                            <Setter TargetName="SortArrow" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="SortArrow" Property="RenderTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="180" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="SortDirection" Value="Descending">
+                            <Setter TargetName="SortArrow" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" Padding="5" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="FilteringColumnHeaderDataGrid" TargetType="{x:Type DataGridColumnHeader}">
+        <!--<Setter Property="OverridesDefaultStyle" Value="True"/>-->
+        <Setter Property="Background" Value="{StaticResource GainsboroBrush}"/>
+        <Setter Property="MinHeight" Value="50"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                    <Grid>
+                        <Border BorderThickness="0.5 0 0.5 0" BorderBrush="{StaticResource GrayBrush}">
+                            <Grid Background="{StaticResource GainsboroBrush}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="6"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Path x:Name="SortArrow"                                            
+                                            HorizontalAlignment="Center" VerticalAlignment="Center" Width="8" Margin="2 0" Stretch="Fill" Fill="Black"
+                                            RenderTransformOrigin="0.5,0.4" Visibility="Collapsed" Data="M0,0 L1,0 0.5,1 z" />
+                                <ContentPresenter Grid.Row="1"/>
+                            </Grid>
+                        </Border>
+                        <Thumb x:Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                        <Thumb x:Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="SortDirection" Value="Ascending">
+                            <Setter TargetName="SortArrow" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="SortArrow" Property="RenderTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="180" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="SortDirection" Value="Descending">
+                            <Setter TargetName="SortArrow" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Grid Margin="5 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding}" Padding="5" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center"/>
+                        <Button Grid.Column="1" x:Name="tbSearch" Height="16" VerticalContentAlignment="Center" Style="{StaticResource TransparentButton}">
+                            <Viewbox Child="{StaticResource FilterIcon}"/>
+                        </Button>
+                    </Grid>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DefultRowDataGrid" TargetType="{x:Type DataGridRow}">
+        <Setter Property="MinHeight" Value="35" />
+    </Style>
+
+    <Style x:Key="FilteringCellRowDataGrid" TargetType="{x:Type DataGridCell}">
+        <Setter Property="Padding" Value="30"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridCell}">
+                    <Border Name="Border" Padding="5" BorderBrush="Transparent" BorderThickness="0" SnapsToDevicePixels="True">
+                        <ContentPresenter Margin="2 5" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource LightSlateGrayBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Foreground" Value="Black"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="BaseDataGrid" TargetType="{x:Type DataGrid}">
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
+        <Setter Property="CanUserAddRows" Value="False"/>
+        <Setter Property="CanUserDeleteRows" Value="False"/>
+        <Setter Property="AutoGenerateColumns" Value="True"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="DataGrid.GridLinesVisibility" Value="None"/>
+        <Setter Property="Background" Value="{StaticResource DefaultPageBackgroungBrush}"/>
+        <Setter Property="RowBackground" Value="{StaticResource DefaultPageBackgroungBrush}"/>
+        <Setter Property="AlternatingRowBackground" Value="{StaticResource GainsboroBrush}"/>
+        <Setter Property="CellStyle" Value="{StaticResource FilteringCellRowDataGrid}"/>
+    </Style>
+    <Style x:Key="DeafultDataGrid" TargetType="{x:Type DataGrid}" BasedOn="{StaticResource BaseDataGrid}">
+        <Setter Property="ColumnHeaderStyle" Value="{StaticResource DeafultColumnHeaderDataGrid}"/>
+    </Style>
+    <Style x:Key="FilteringDataGrid" TargetType="{x:Type DataGrid}" BasedOn="{StaticResource BaseDataGrid}">
+        <Setter Property="ColumnHeaderStyle" Value="{StaticResource FilteringColumnHeaderDataGrid}"/>
+    </Style>
+
+
+
+
+</ResourceDictionary>

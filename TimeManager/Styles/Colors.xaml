@@ -1,0 +1,78 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TimeManager">
+    <Color x:Key="WhiteColor">White</Color>
+    <SolidColorBrush x:Key="WhiteBrush" Color="White"/>
+    <Color x:Key="BlackColor">Black</Color>
+    <SolidColorBrush x:Key="BlackBrush" Color="Black"/>
+
+    <SolidColorBrush x:Key="DefaultIconsBrush" Color="Black"/>
+    <!--для всі іконок в програмі (більшості)-->
+    <SolidColorBrush x:Key="DefaultPageBackgroungBrush" Color="White"/>
+    <!--для всі іконок в програмі (більшості)-->
+
+
+    <Color x:Key="SnowColor">Snow</Color>
+    <SolidColorBrush x:Key="SnowBrush" Color="Snow"/>
+
+    <Color x:Key="WhiteSmokeColor">WhiteSmoke</Color>
+    <SolidColorBrush x:Key="WhiteSmokeBrush" Color="WhiteSmoke"/>
+
+    <Color x:Key="GainsboroColor">Gainsboro</Color>
+    <SolidColorBrush x:Key="GainsboroBrush" Color="Gainsboro"/>
+
+    <Color x:Key="LightGrayColor">LightGray</Color>
+    <SolidColorBrush x:Key="LightGrayBrush" Color="LightGray"/>
+
+    <Color x:Key="GrayColor">Gray</Color>
+    <SolidColorBrush x:Key="GrayBrush" Color="Gray"/>
+
+    <Color x:Key="LightSlateGrayColor">LightSlateGray</Color>
+    <SolidColorBrush x:Key="LightSlateGrayBrush" Color="LightSlateGray"/>
+
+
+    <Color x:Key="WheatColor">Wheat</Color>
+    <SolidColorBrush x:Key="WheatBrush" Color="Wheat"/>
+
+    <Color x:Key="BisqueColor">Bisque</Color>
+    <SolidColorBrush x:Key="BisqueBrush" Color="Bisque"/>
+
+    <Color x:Key="DarkKhakiColor">DarkKhaki</Color>
+    <SolidColorBrush x:Key="DarkKhakiBrush" Color="DarkKhaki"/>
+
+
+    <Color x:Key="RedColor">Red</Color>
+    <SolidColorBrush x:Key="RedBrush" Color="Red"/>
+
+    <Color x:Key="OrangeRedColor">OrangeRed</Color>
+    <SolidColorBrush x:Key="OrangeRedBrush" Color="OrangeRed"/>
+
+    <Color x:Key="BrownColor">Brown</Color>
+    <SolidColorBrush x:Key="BrownBrush" Color="Brown"/>
+
+    <Color x:Key="LightCoralColor">LightCoral</Color>
+    <SolidColorBrush x:Key="LightCoralBrush" Color="LightCoral"/>
+
+
+
+    <Color x:Key="LightSteelBlueColor">LightSteelBlue</Color>
+    <SolidColorBrush x:Key="LightSteelBlueBrush" Color="LightSteelBlue"/>
+
+    <Color x:Key="CornflowerBlueColor">CornflowerBlue</Color>
+    <SolidColorBrush x:Key="CornflowerBlueBrush" Color="CornflowerBlue"/>
+
+
+    <Color x:Key="YellowGreenColor">YellowGreen</Color>
+    <SolidColorBrush x:Key="YellowGreenBrush" Color="YellowGreen"/>
+
+    <Color x:Key="PaleGreenColor">PaleGreen</Color>
+    <SolidColorBrush x:Key="PaleGreenBrush" Color="PaleGreen"/>
+
+    <Color x:Key="SeaGreenColor">SeaGreen</Color>
+    <SolidColorBrush x:Key="SeaGreenBrush" Color="SeaGreen"/>
+
+    <Color x:Key="LimeGreenColor">LimeGreen</Color>
+    <SolidColorBrush x:Key="LimeGreenBrush" Color="LimeGreen"/>
+
+
+</ResourceDictionary>
